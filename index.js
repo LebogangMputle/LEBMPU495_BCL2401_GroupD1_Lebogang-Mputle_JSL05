@@ -25,11 +25,34 @@ const guardians = {
 };
 
 function generatePlaylist(guardians, songs) {
-    return Object.entries(guardians).reduce((playlists, [guardian, genre]) => {
+    const playlists = {};
+    Object.keys(guardians).map(guardian => {
+        const genre = guardians[guardian];
         playlists[guardian] = songs.filter(song => song.genre === genre).map(song => song.title);
-        return playlists;
-    }, {});
+    });
+    return playlists;
 }
+
+
+//create and append elements to the #playlists div:
+const displayPlaylists = (guardianPlaylists) => {
+    const playlistsDiv = document.getElementById('playlists');
+    Object.entries(guardianPlaylists).forEach(([guardian, playlist]) => {
+        const guardianDiv = document.createElement('div');
+        const guardianName = document.createElement('h2');
+        guardianName.textContent = guardian + "'s Playlist:";
+        guardianDiv.appendChild(guardianName);
+
+        const songList = document.createElement('ul');
+        playlist.forEach(song => {
+            const songItem = document.createElement('li');
+            songItem.textContent = song;
+            songList.appendChild(songItem);
+        });
+        guardianDiv.appendChild(songList);
+        playlistsDiv.appendChild(guardianDiv);
+    });
+};
 
 // Call generatePlaylist and display the playlists for each Guardian
 const guardianPlaylists = generatePlaylist(guardians, songs);
