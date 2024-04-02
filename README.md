@@ -1,13 +1,16 @@
 # [JSL05] Submission: Galaxy Playlist Generator
 # Challenges Faced:
 
-Dynamic Playlist Generation: The main challenge was to generate playlists dynamically based on each guardian's preferred genre.
+# Dynamic Playlist Generation: The main challenge was to generate playlists dynamically based on each guardian's preferred genre.
+The code dynamically generates playlists tailored to each guardian's preferred genre and displays them on the webpage.
 
-DOM Manipulation: Integrating the playlist generation logic with the DOM, ensuring it displays correctly.
+# DOM Manipulation: Integrating the playlist generation logic with the DOM, ensuring it displays correctly.
+Before properly reading the instructions, I used html and css to make the playlist but eventually I fixed it by using DOM to manipulating the HTML to ensure the correct display. 
 
-Styling: Incorporating styles to make the playlists visually appealing and easy to read.
-
-Before properly reading the instructions, I used html and css to make the playlist but eventually I fixed it by using DOM to manipulating the HTML. 
+# Styling: Incorporating styles to make the playlists visually appealing and easy to read.
+The list style removal was used to remove the bullets from the list items to make the playlist more compact and visually apealing.
+Margin for list items is used to the bottom of each list item, creating some space between them.
+The playlist division class class is used to apply additional CSS styles to the playlist container.
 
 # Suggestions for Modifications:
 
@@ -23,7 +26,7 @@ Optimization: Explore ways to optimize the code for better performance, especial
 
 Localization: If applicable, consider adding support for multiple languages in the interface.
 
-By addressing these points, the code can be made more robust, user-friendly, and scalable.
+By addressing these points, the code can be made more user-friendly.
 
 
 
